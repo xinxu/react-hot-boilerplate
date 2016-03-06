@@ -6,7 +6,8 @@ new WebpackDevServer(webpack(config), {
   contentBase: config.output.path,
   publicPath: config.output.publicPath,
   hot: true,
-  historyApiFallback: true
+  historyApiFallback: true,
+  stats: { colors: true },
 }).listen(3000, 'localhost', function(err, result) {
   if (err) {
     return console.log(err);
